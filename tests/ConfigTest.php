@@ -55,17 +55,6 @@ class ConfigTest extends TestCase {
     }
 
     /**
-     * ALL Two Files
-     *
-     */
-    public function testAllTwoFiles() {
-        $config1 = new Config(__DIR__ . '/mocks/config.json');
-        $config2 = new Config(__DIR__ . '/mocks/config.local.json');
-        $config1->all($config2);
-        $this->assertNotEquals($config1->get('environment'),$config2->get('environment'));
-    }
-
-    /**
      * InValid Format
      *
      */
