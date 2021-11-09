@@ -63,11 +63,6 @@ class Config extends AbstractConfig {
                     $parts     = explode('.', $info['basename']);
                     $extension = array_pop($parts);
 
-                    // Skip the `dist` extension
-                    if ($extension === 'dist') {
-                        $extension = array_pop($parts);
-                    }
-
                     // Get file parser
                     $parser = $this->getParser($extension);
 
